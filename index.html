@@ -1,19 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encryption Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Encryption Website</h1>
-    <h3>encode key</h3>
-    <input type="text" id="encode key" placeholder="encodeKey">
-    <h3>encode message</h3>
-    <input type="text" id="encode message" placeholder="encodeMessage">
-    <button onclick="encode()">encode</button>
-    <h3>decode</h3>
-    <input type="text" id="decode" placeholder="decode">
-    <button onclick="decode()">decode</button>
+    <div class="container">
+        <div class="encode">
+            <h3>Encode Message</h3>
+            <input type="text" id="encodeMessage" placeholder="Encode Message">
+            <button onclick="encode()">Encode</button>
+        </div>
+        
+        <div class="encoded">
+            <h3>Encoded Message</h3>
+            <input type="text" id="encodedMessage" readonly>
+        </div>
+        
+        <div class="decode">
+            <h3>Decode Key</h3>
+            <input type="text" id="decodeKey" placeholder="Decode Key">
+            
+            <h3>Decode Message</h3>
+            <input type="text" id="decodeMessage" placeholder="Enter Encoded Message">
+            <button onclick="decode()">Decode</button>
+        </div>
 
+        <p id="result"></p>
+    </div>
+
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
